@@ -1,19 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>That's So Cravin'</title>
-    
-</head>
-<body>
-        <h1>That's So Cravin'</h1>
-        <footer>
 
-        </footer>
-        <!--CHANGE-TODO:Check to make sure they are in the right order-->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+    <script id="recipe-template" type="text/x-handlebars-template">
+
+        <div>
+            <img src="{{smallImageUrls}}" />
+            <h1 id="title">{{recipeName}}</h1>
+            <ul id="ingredients-list">{{ingredients}}</ul>
+            <p id="total-time">{{totalTimeInSeconds}}</p>
+            <!--TODO:Add source site URL to handlebar template -->
+        </div>
+
+    </script>
+
+    <!--TODO: Insert MetaData to create pin image-->
+    <!--<html prefix="og: http://ogp.me/ns#">
+<head>
+<title>The Rock (1996)</title>
+<meta property="og:title" content="The Rock" />
+<meta property="og:type" content="video.movie" />
+<meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />
+<meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />-->
+</head>
+
+<body>
+    <h1>That's So Cravin'</h1>
+    <section class="recipe-view"></section>
+
+    <section class="search-view">
+        <!--TODO:Add search result recipe count-->
+    </section>
+
+    <section class="login-view">
+        <!--TODO:Create login form-->
+    </section>
+
+    <section class="error-view"></section>
+
+    <section class="about-view">
+        <!--TODO:Add photos and paragraphs for each team member-->
+    </section>
+
+    <footer> </footer>
+
+    <!--CHANGE-TODO:Check to make sure they are in the right order-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/models/recipe.js"></script>
@@ -25,4 +64,5 @@
     <script src="scripts/views/about-view.js"></script>
 
 </body>
+
 </html>
