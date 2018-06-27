@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>That's So Cravin'</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>That's So Cravin'</title>
-
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="styel/module.css">
+    
     <script id="recipe-template" type="text/x-handlebars-template">
         <div>
             <img src="{{smallImageUrls}}" />
@@ -19,7 +22,7 @@
 
     <!--TODO: Insert MetaData to create pin image-->
     <!--<html prefix="og: http://ogp.me/ns#">
-<head>
+
 <title>The Rock (1996)</title>
 <meta property="og:title" content="The Rock" />
 <meta property="og:type" content="video.movie" />
@@ -28,7 +31,29 @@
 </head>
 
 <body>
+    </header class="clearfix">
+    <section>
+        <img src=./img/food.png />
+        <!-- <span>That's So Cravin'</span> -->
+    </section>
+    <nav>
+            <div class="icon-menu"></div>
+        <ul>
+            <li class="navigator" data-content="recipe">
+                <a href="#" class="icon-magnifier"> Search</a>
+            </li>
+            <li class="navigator" data-content="about">
+                <a href="#" class="icon-about">About Me</a>
+            </li>
+            <li class="navigator" data-content="login">
+                <a href="#" class="icon-about">login</a>
+            </li>
+        </ul>
+    </nav>
+    </header>
+    
     <h1>That's So Cravin'</h1>
+
     <section class="recipe-view">
 			<section id="recipe-count"></section>
       <section id="recipe-list"></section>
