@@ -14,6 +14,15 @@ var app = app || {};
   module.ENVIRONMENT = {
     apiUrl: module.isProduction ? productionApiUrl : developmentApiUrl
   };
+  //TODO: hide/show nave menu
+  // https://codepen.io/RedJokingInn/pen/eGQzYZ
+
+  $('.log-in').on('click',function(e){
+    e.preventDefault();
+    $('.container').hide();
+    $('#log-in').show();
+ })
+
 
   // DONE-TODO: Create a .showOnly method to reveal the containers of your single-page app.
   module.showOnly = (selector) => {
