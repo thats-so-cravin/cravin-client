@@ -5,6 +5,11 @@ var app = app || {};
 (function (module) {
 
   function Recipe(rawDataObj) {
+/*  CHANGE-TODO: May refactor
+    Object.keys(rawDataObj).forEach(key => {
+      this[key] = rawDataObj[key]
+    }, this);
+*/
     this.recipeName = rawDataObj.recipeName,
     this.ingredients = rawDataObj.ingredients,
     this.totalTimeInSeconds = rawDataObj.totalTimeInSeconds,
@@ -17,7 +22,7 @@ var app = app || {};
   Recipe.prototype.toHtml = function () {
     return app.render('recipe-template', this);
   }
-
+  
   Recipe.loadAll = (arrayOfRecipes) => {
     // TODO - CHANGE: Sort the recipes
     // Recipe.all = rows.map(recipeObj => new Recipe(recipeObj));
@@ -63,8 +68,6 @@ var app = app || {};
   //    if preferences is null just hit API
   //    if preferences is not null then use them in API call
   //   }
-
-
 
   module.Recipe = Recipe;
 })(app);
