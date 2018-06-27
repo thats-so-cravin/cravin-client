@@ -8,7 +8,6 @@
     <title>That's So Cravin'</title>
 
     <script id="recipe-template" type="text/x-handlebars-template">
-
         <div>
             <img src="{{smallImageUrls}}" />
             <h1 id="title">{{recipeName}}</h1>
@@ -16,7 +15,6 @@
             <p id="total-time">{{totalTimeInSeconds}}</p>
             <!--TODO:Add source site URL to handlebar template -->
         </div>
-
     </script>
 
     <!--TODO: Insert MetaData to create pin image-->
@@ -31,7 +29,10 @@
 
 <body>
     <h1>That's So Cravin'</h1>
-    <section class="recipe-view"></section>
+    <section class="recipe-view">
+			<section id="recipe-count"></section>
+      <section id="recipe-list"></section>
+		</section>
 
     <section class="search-view">
         <!--TODO:Add search result recipe count-->
@@ -62,6 +63,12 @@
     <script src="scripts/views/login-view.js"></script>
     <script src="scripts/views/error-view.js"></script>
     <script src="scripts/views/about-view.js"></script>
+    <script> 
+				$( document ).ready(function() {
+				console.log( "document ready!" );
+				app.Recipe.fetchAll(app.recipeView.initIndexPage);
+				});
+			</script>
 
 </body>
 
