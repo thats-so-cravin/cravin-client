@@ -4,8 +4,8 @@ var app = app || {};
 
 (function (module) {
 
-  let productionApiUrl = 'https://thats-so-cravin.herokuapp.com/';
-  let yummlyApiUrl = 'http://api.yummly.com/v1';
+  let productionApiUrl = 'https://thats-so-cravin.herokuapp.com';
+  // let yummlyApiUrl = 'http://api.yummly.com/v1';
   let developmentApiUrl = 'http://localhost:3000';
   module.isProduction = /^(?!localhost|127)/.test(window.location.hostname);
 
