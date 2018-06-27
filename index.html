@@ -6,12 +6,13 @@
     <title>That's So Cravin'</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style/base.css">
-    <link rel="stylesheet" href="style/layout.css">
-    <link rel="stylesheet" href="styel/module.css">
-    <link rel="stylesheet" href="styel/reset.css">
-    <link rel="stylesheet" href="styel/state.css">
-    
+    <link rel="stylesheet" type="text/css" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <link rel="stylesheet" type="text/css" href="styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="styles/modules.css">
+    <link rel="stylesheet" type="text/css" href="styles/state.css">
+
+    <!-- //TODO: bottom code to be commented back in -->
     <script id="recipe-template" type="text/x-handlebars-template">
         <div>
             <img src="{{smallImageUrls}}" />
@@ -19,8 +20,9 @@
             <ul id="ingredients-list">{{ingredients}}</ul>
             <p id="total-time">{{totalTimeInSeconds}}</p>
             <!--TODO:Add source site URL to handlebar template -->
-        </div>
+    </div>
     </script>
+    <!-- //TODO: code above to be commented back in -->
 
     <!--TODO: Insert MetaData to create pin image-->
     <!--<html prefix="og: http://ogp.me/ns#">
@@ -33,35 +35,43 @@
 </head>
 
 <body>
-    </header class="clearfix">
-    <section>
-        <img src=./img/food.png />
-        <!-- <span>That's So Cravin'</span> -->
-    </section>
-    <nav>
-            <div class="icon-menu"></div>
-        <ul>
-            <li class="navigator" data-content="recipe">
-                <a href="#" class="icon-magnifier"> Search</a>
-            </li>
-            <li class="navigator" data-content="about">
-                <a href="#" class="icon-about">About Me</a>
-            </li>
-            <li class="navigator" data-content="login">
-                <a href="#" class="icon-about">login</a>
-            </li>
-        </ul>
-    </nav>
+    <header class="clearfix">
+        <div>
+            <img id="foodlogo" src=./img/food.png />
+            <!-- <span>That's So Cravin'</span> -->
+        </div>
+        <div>
+            <nav>
+                <!-- <div class="icon-menu"></div> -->
+
+                <ul>
+                    <li class="navigator" data-content="recipe">
+                        <a href="#" class="icon-magnifier">search</a>
+                    </li>
+                    <li class="navigator" data-content="about">
+                        <a href="#" class="icon-about">about us</a>
+                    </li>
+                    <li class="navigator log-in" data-content="login">
+                        <a href="#log-in" class="icon-about">log in</a>
+
+                        <li class="navigator" data-content="My Account">
+                            <a href="#" class="icon-about">my account</a>
+                        </li>
+                </ul>
+
+            </nav>
+        </div>
     </header>
-    
+
     <h1>That's So Cravin'</h1>
 
-    <section class="recipe-view">
-			<section id="recipe-count"></section>
+    <!-- //TODO: bottom code to be commented back in    <!-- <section class="recipe-view"> -->
+    <!-- <section id="recipe-count"></section>
       <section id="recipe-list"></section>
-		</section>
+		</section> -->
+    <!-- // code above to be commented back in  -->
 
-    <section class="search-view">
+    <section class="search-view container">
         <!--TODO:Add search result recipe count-->
         <form>
             <fieldset>
@@ -82,35 +92,35 @@
             </fieldset>
         </form>
     </section>
-
-    <section class="login-view">
-			<h2>Sign Up</h2>
-			<form>
-				<fieldset>
-					<legend>Sign Up</legend>
-					<legend>First Name:
-						<input id="first-name" type="text">
-					</legend>
-					<legend>Last Name:
-						<input id="last-name" type="text">
-					</legend>
-					<legend>Username:
-						<input id="username" type="text">
-					</legend>
-					<legend>Password:
-						<input id="password" type="text">
-					</legend>
-					<button id="submit" data-id="#">Sign Up</button>
-				</fieldset>
-			</form>
+    <!-- //TODO: bottom code to be commented back in -->
+    <section class="login-view container" id="log-in">
+        <h2>Sign Up</h2>
+        <form>
+            <fieldset>
+                <legend>Sign Up</legend>
+                <legend>First Name:
+                    <input id="first-name" type="text">
+                </legend>
+                <legend>Last Name:
+                    <input id="last-name" type="text">
+                </legend>
+                <legend>Username:
+                    <input id="username" type="text">
+                </legend>
+                <legend>Password:
+                    <input id="password" type="text">
+                </legend>
+                <button id="submit" data-id="#">Sign Up</button>
+            </fieldset>
+        </form>
     </section>
+    <!-- // code above to be commented back in  -->
+    <section class="error-view container"></section>
 
-    <section class="error-view"></section>
-
-    <section class="about-view">
+    <section class="about-view container">
         <!--TODO:Add photos and paragraphs for each team member-->
     </section>
-    
+
     <!--TODO: Add footer content-->
     <footer></footer>
 
@@ -127,6 +137,7 @@
     <script src="scripts/views/login-view.js"></script>
     <script src="scripts/views/error-view.js"></script>
     <script src="scripts/views/about-view.js"></script>
+
     <!-- <script> 
 				$( document ).ready(function() {
 				console.log( "document ready!" );
@@ -135,5 +146,6 @@
 			</script> -->
 
 </body>
+
 
 </html>
