@@ -63,11 +63,14 @@ var app = app || {};
   // TODO: Run the recipe results through the constructor function, and toHtml
 
 
-  // $.get to the user from server, {
-  //   return preferences
-  //    if preferences is null just hit API
-  //    if preferences is not null then use them in API call
-  //   }
+//   if (/* preferences is null */) {
+//     // just hit API
+//   } else if (/*user has preference*/) {
+//     /* concatinate 
+//     &allowed + Allergy/Diet + []= + id + ^ + description 
+//     and use in API call*/
+//   }
+// }
 
   module.Recipe = Recipe;
 })(app);

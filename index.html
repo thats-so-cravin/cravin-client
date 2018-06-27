@@ -6,10 +6,10 @@
     <title>That's So Cravin'</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style/base.css">
-    <link rel="stylesheet" href="style/layout.css">
-    <link rel="stylesheet" href="styel/module.css">
-    
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <link rel="stylesheet" type="text/css" href="styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="styles/modules.css">
+
     <script id="recipe-template" type="text/x-handlebars-template">
         <div>
             <img src="{{smallImageUrls}}" />
@@ -37,7 +37,7 @@
         <!-- <span>That's So Cravin'</span> -->
     </section>
     <nav>
-            <div class="icon-menu"></div>
+        <div class="icon-menu"></div>
         <ul>
             <li class="navigator" data-content="recipe">
                 <a href="#" class="icon-magnifier"> Search</a>
@@ -51,38 +51,60 @@
         </ul>
     </nav>
     </header>
-    
+
     <h1>That's So Cravin'</h1>
 
     <section class="recipe-view">
-			<section id="recipe-count"></section>
-      <section id="recipe-list"></section>
-		</section>
+        <section id="recipe-count"></section>
+        <section id="recipe-list"></section>
+    </section>
 
     <section class="search-view">
         <!--TODO:Add search result recipe count-->
     </section>
 
     <section class="login-view">
-			<h2>Sign Up</h2>
-			<form>
-				<fieldset>
-					<legend>Sign Up</legend>
-					<legend>First Name:
-						<input id="first-name" type="text">
-					</legend>
-					<legend>Last Name:
-						<input id="last-name" type="text">
-					</legend>
-					<legend>Username:
-						<input id="username" type="text">
-					</legend>
-					<legend>Password:
-						<input id="password" type="text">
-					</legend>
-					<button id="submit" data-id="#">Sign Up</button>
-				</fieldset>
-			</form>
+        <h2>Sign Up</h2>
+        <form>
+            <fieldset>
+                <legend>Sign Up</legend>
+                <legend>Username:
+                    <input id="username" type="text">
+                </legend>
+                <legend>Password:
+                    <input id="password" type="text">
+                    <div id="food-prefs">
+                        <legend>Dietary Preferences:</legend>
+                        <!-- Allergies List; CHANGE-TODO: can create seperate select form later -->
+                        <select id="allowed-allergies">
+                            <option id="no-allergy">Select an Allergy</option>
+                            <option id="dairy-free-396">Dairy Free</option>
+                            <option id="egg-free-397">Egg Free</option>
+                            <option id="gluten-free-393">Gluten Free</option>
+                            <option id="peanut-free-394">Peanut Free</option>
+                            <option id="seafood-free-398">Seafood Free</option>
+                            <option id="sesame-free-399">Sesame Free</option>
+                            <option id="soy-free-400">Soy Free</option>
+                            <option id="sulfite-free-401">Sulfite Free</option>
+                            <option id="tree-nut-free-395">Tree Nut Free</option>
+                            <option id="wheat-free-392">Wheat Free</option>
+                        </select>
+
+                        <!-- Diet List; CHANGE-TODO: can create seperate select form later -->
+                        <select id="allowed-diets">
+                            <option id="no-diet">Select a Diet</option>
+                            <option id="lacto-vegetarian-388">Lacto Vegetarian</option>
+                            <option id="ovo-vegeterian-389">Ovo Vegetarian</option>
+                            <option id="pescetarian-390">Pescetarian</option>
+                            <option id="vegan-386">Vegan</option>
+                            <option id="vegetarian-387">Vegetarian</option>
+                            <option id="paleo-403">Paleo</option>
+                        </select>
+                    </div>
+                </legend>
+                <button id="sign-up-button" data-id="#">Sign Up</button>
+            </fieldset>
+        </form>
     </section>
 
     <section class="error-view"></section>
@@ -90,7 +112,7 @@
     <section class="about-view">
         <!--TODO:Add photos and paragraphs for each team member-->
     </section>
-    
+
     <!--TODO: Add footer content-->
     <footer></footer>
 
@@ -108,11 +130,11 @@
     <script src="scripts/views/error-view.js"></script>
     <script src="scripts/views/about-view.js"></script>
     <script> 
-				$( document ).ready(function() {
-				console.log( "document ready!" );
-				app.Recipe.fetchAll(app.recipeView.initIndexPage);
-				});
-			</script>
+        $(document).ready(function () {
+            console.log("document ready!");
+            app.Recipe.fetchAll(app.recipeView.initIndexPage);
+        });
+    </script>
 
 </body>
 
