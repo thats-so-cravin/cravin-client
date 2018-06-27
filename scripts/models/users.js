@@ -6,8 +6,4 @@ var app = app || {};
 
   Users.all = [];
 
-  Users.fetchAllUsers = callback => {
-    $.get('')
-  };
-
 })(app);
