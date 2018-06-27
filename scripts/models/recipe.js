@@ -35,6 +35,11 @@ var app = app || {};
         //     })
     };
 
+    // $.get to the user from server, return preferences
+    // if preferences is null just hit API
+    // if preferences is not null thne use them in API call
+
+
 
     module.Recipe = Recipe;
 })(app);
