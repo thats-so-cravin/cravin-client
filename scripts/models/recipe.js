@@ -24,7 +24,7 @@ var app = app || {};
     arrayOfRecipes.forEach(recipeObj => Recipe.all.push(new Recipe(recipeObj)));
   }
 
-  Recipe.fetchAll = (callback) => {
+  Recipe.fetchAll = callback => {
     $.get(`http://api.yummly.com/v1/api/recipes?_app_id=78c6217b&_app_key=
     084d45aa3306778e2ebbc3148fdaab96&q=onion+soup`).then(results => {
       console.log(results.matches);
