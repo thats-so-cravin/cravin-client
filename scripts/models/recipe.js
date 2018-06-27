@@ -5,7 +5,7 @@ var app = app || {};
 (function (module) {
 
   function Recipe(rawDataObj) {
-/*  CHANGE-TODO: May refactor
+    /*  CHANGE-TODO: May refactor
     Object.keys(rawDataObj).forEach(key => {
       this[key] = rawDataObj[key]
     }, this);
@@ -22,20 +22,28 @@ var app = app || {};
   Recipe.prototype.toHtml = function () {
     return app.render('recipe-template', this);
   }
-  
+
   Recipe.loadAll = (arrayOfRecipes) => {
     // TODO - CHANGE: Sort the recipes
     // Recipe.all = rows.map(recipeObj => new Recipe(recipeObj));
+    console.log('in loadAll')
     arrayOfRecipes.forEach(recipeObj => Recipe.all.push(new Recipe(recipeObj)));
+    app.recipeView.initIndexPage();
   }
 
-  Recipe.fetchAll = callback => {
-    $.get(`http://api.yummly.com/v1/api/recipes?_app_id=78c6217b&_app_key=
-    084d45aa3306778e2ebbc3148fdaab96&q=onion+soup`).then(results => {
-      console.log(results.matches);
-      Recipe.loadAll(results.matches);
-      callback();
-    }).catch(err => console.log(err));
+  Recipe.fetchAll = (callback, searchStr) => {
+    // hardcoded search
+  //     $.get(`http://api.yummly.com/v1/api/recipes?_app_id=78c6217b&_app_key=
+  // 084d45aa3306778e2ebbc3148fdaab96&q=onion+soup`)
+
+  // dynamic search
+    $.get(`http://api.yummly.com/v1/api/recipes?_app_id=78c6217b&_app_key=084d45aa3306778e2ebbc3148fdaab96${searchStr}`, data => {console.log(data)})
+    
+      .then(results => {
+        console.log(results.matches);
+        // Recipe.loadAll(results.matches);
+        callback(results.matches);
+      }).catch(err => console.log(err));
   }
 
   //TODO: Add loadOne for whatever they click on
