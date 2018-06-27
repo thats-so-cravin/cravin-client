@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="styel/module.css">
+    <link rel="stylesheet" href="styel/reset.css">
+    <link rel="stylesheet" href="styel/state.css">
     
     <script id="recipe-template" type="text/x-handlebars-template">
         <div>
@@ -61,6 +63,24 @@
 
     <section class="search-view">
         <!--TODO:Add search result recipe count-->
+        <form>
+            <fieldset>
+                <legend>Search</legend>
+                <legend>ingredient 1:
+                    <input id="first-ing" type="text">
+                </legend>
+                <legend>ingredient 2:
+                    <input id="second-ing" type="text">
+                </legend>
+                <legend>ingredient 3:
+                    <input id="third-ing" type="text">
+                </legend>
+                <legend>ingredient 4:
+                    <input id="fourth-ing" type="text">
+                </legend>
+                <button id="search" data-id="#">Search</button>
+            </fieldset>
+        </form>
     </section>
 
     <section class="login-view">
