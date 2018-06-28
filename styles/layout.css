@@ -33,7 +33,7 @@ nav li{
     }
 
     li a{
-        outline:dashed black 1px;
+        /* outline:dashed black 1px; */
         text-decoration: none;
     }
 
