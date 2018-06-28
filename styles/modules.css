@@ -46,6 +46,12 @@
     padding:10px;
 }
 
+#signup-box{
+    margin:auto;
+    text-align: center;
+    padding:10px;
+}
+
 .recipe-view {
     padding-top: 40vh;
 }
@@ -103,7 +109,4 @@ fieldset{
    
     
 }
-
-
-
 

@@ -87,58 +87,68 @@
             </form>
         </section>
 
-        <!-- <section class="recipe-view">
-            <section id="recipe-count"></section>
+        <section class="recipe-view">
+            <!-- <section id="recipe-count"></section> -->
             <section id="recipe-list"></section>
-        </section> -->
+        </section>
 
     </section>
 
-    <section class="login-view container" id="log-in">
-        <form id="login-box">
+    <section class="signup-view container" id="sign-up">
+        <form id="signup-box">
             <fieldset>
-                <legend>Sign Up/ Sign In</legend>
-                    <legend>
-                        <input id="username" placeholder="Username"  type="text">
-                    </legend>
-                    <legend>
-                        <input id="password" placeholder="Password" type="text">
-                        <div id="food-prefs">
-                            <legend>Dietary Preferences:</legend>
-                            <!-- Allergies List; CHANGE-TODO: can create seperate select form later -->
-                            <select id="allowedAllergy">
-                                <option id="no-allergy">Select an Allergy</option>
-                                <option id="396^Dairy-Free">Dairy-Free</option>
-                                <option id="397^Egg-Free">Egg-Free</option>
-                                <option id="393^Gluten-Free">Gluten-Free</option>
-                                <option id="394^Peanut-Free">Peanut-Free</option>
-                                <option id="398^Peanut-Free">Seafood-Free</option>
-                                <option id="399^Sesame-Free">Sesame-Free</option>
-                                <option id="400^Soy-Free">Soy-Free</option>
-                                <option id="401^Sulfite-Free">Sulfite-Free</option>
-                                <option id="395^TreeNut-Free">Tree Nut-Free</option>
-                                <option id="392^Wheat-Free">Wheat-Free</option>
-                            </select>
+                <legend>Sign Up</legend>
+                <legend>
+                    <input id="username" placeholder="Username" type="text">
+                </legend>
+                <legend>
+                    <input id="password" placeholder="Password" type="text">
+                    <div id="food-prefs">
+                        <legend>Dietary Preferences:</legend>
+                        <!-- Allergies List; CHANGE-TODO: can create seperate select form later -->
+                        <select id="allowedAllergy">
+                            <option id="no-allergy">Select an Allergy</option>
+                            <option id="396^Dairy-Free">Dairy-Free</option>
+                            <option id="397^Egg-Free">Egg-Free</option>
+                            <option id="393^Gluten-Free">Gluten-Free</option>
+                            <option id="394^Peanut-Free">Peanut-Free</option>
+                            <option id="398^Peanut-Free">Seafood-Free</option>
+                            <option id="399^Sesame-Free">Sesame-Free</option>
+                            <option id="400^Soy-Free">Soy-Free</option>
+                            <option id="401^Sulfite-Free">Sulfite-Free</option>
+                            <option id="395^TreeNut-Free">Tree Nut-Free</option>
+                            <option id="392^Wheat-Free">Wheat-Free</option>
+                        </select>
 
-                            <!-- Diet List; CHANGE-TODO: can create seperate select form later -->
-                            <select id="allowedDiet">
-                                <option id="no-diet">Select a Diet</option>
-                                <option id="388^Lacto-Vegetarian">Lacto-Vegetarian</option>
-                                <option id="389^Ovo-Vegetarian">Ovo-Vegetarian</option>
-                                <option id="390^Pescetarian">Pescetarian</option>
-                                <option id="386^Vegan">Vegan</option>
-                                <option id="387^Vegetarian">Vegetarian</option>
-                                <option id="403^Paleo">Paleo</option>
-                            </select>
-                        </div>
-                    </legend>
-                    <button id="sign-up-button" data-id="#">Submit</button>
+                        <!-- Diet List; CHANGE-TODO: can create seperate select form later -->
+                        <select id="allowedDiet">
+                            <option id="no-diet">Select a Diet</option>
+                            <option id="388^Lacto-Vegetarian">Lacto-Vegetarian</option>
+                            <option id="389^Ovo-Vegetarian">Ovo-Vegetarian</option>
+                            <option id="390^Pescetarian">Pescetarian</option>
+                            <option id="386^Vegan">Vegan</option>
+                            <option id="387^Vegetarian">Vegetarian</option>
+                            <option id="403^Paleo">Paleo</option>
+                        </select>
+                    </div>
+                </legend>
+                <button id="sign-up-button" data-id="#">Submit</button>
                 <!-- </legend> -->
             </fieldset>
         </form>
     </section>
     <!-- // code above to be commented back in  -->
     <section class="error-view container"></section>
+
+    <section class="login-view container" id="log-in">
+        <form id="login-box">
+            <legend>
+                    <input id="username" placeholder="Username" type="text">
+                    <input id="password" placeholder="Password" type="text">
+                    <button id="log-in-button" data-id="#">Submit</button>
+            </legend>
+        </form>
+    </section>
 
     <!--TODO:Add photos and paragraphs for each team member-->
     <section class="about-view container" id="abt">
@@ -148,10 +158,10 @@
         </div>
         <div class="me" id="sara">
             <img src="http://placehold.it/100x100" />
-                <p>I immigrated from Iran to the US about 7 years ago not knowing how to speak English. I worked at one of the
-                    top 5 architecture firms in the US, ZGF. At the same time I got my M.S. degree in Engineering and Technology
-                    Management (ETM) from PSU.
-                </p>
+            <p>I immigrated from Iran to the US about 7 years ago not knowing how to speak English. I worked at one of the top
+                5 architecture firms in the US, ZGF. At the same time I got my M.S. degree in Engineering and Technology
+                Management (ETM) from PSU.
+            </p>
         </div>
         <div class="me" id="suzanne">
             <img src="http://placehold.it/100x100" />
