@@ -1,25 +1,44 @@
-@media only screen and (max-width: 480px) {
-
-
-
-    #srch{
-        outline:dashed black 1px;
-        position: fixed; 
-        height:20%;
-        top:25%;
-        left:25%;
-        transform:translate (-50%, -50%);
-        
-    }
-    #log-in{
-      outline: dashed 2px blue;
-      outline:dashed black 1px;
-        position: fixed; 
-        height:20%;
-        top:25%;
-        left:25%;
-        transform:translate (-50%, -50%);
-
-    }
-
+/* need to make logo size respnsive */
+#foodlogo{
+    height: 70px;
+    width: 70px;
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
+
+header{
+    background-color: rgb(255, 0, 0);
+    /* height: 10%; */
+    /* position:relative; */
+    outline:dashed black 1px;
+    position:fixed;
+    width:100vw;
+    display:grid;
+    grid-template-columns:1fr 3fr;
+}
+
+nav{
+    /* margin: 0px auto; */
+    text-align: right;
+    /* position:absolute; */
+    /* right:2; */
+    /* top:38%; */
+    margin-right:5%;
+    /* outline: dashed black 1px; */
+    box-sizing: border-box;
+    padding-top:2.5em;
+    
+}
+
+nav li{
+    display:inline-block;
+    list-style-type: none;
+    padding:5px;
+
+    }
+
+    li a{
+        outline: dashed black 1px;
+        text-decoration: none;
+    }

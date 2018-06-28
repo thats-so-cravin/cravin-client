@@ -17,25 +17,28 @@ var app = app || {};
   //TODO: hide/show nave menu
   // https://codepen.io/RedJokingInn/pen/eGQzYZ
 
-  $('.log-in').on('click', function (e) {
-    e.preventDefault();
-    $('.container').hide();
-    $('#log-in').show();
-  })
-
-  $('.abt').on('click', function (e) {
-    e.preventDefault();
-    $('.container').hide();
-    $('#abt').show();
-  })
-
-  $('.srch').on('click', function (e) {
-    e.preventDefault();
-    $('.container').hide();
-    $('#srch').show();
-    // $('.recipe-view').show();
-  })
   // TODO: review the code below for keeping the search form while recipe is shown
+
+  // CHANGE-TODO: These may need to be commented back in
+  // $('.log-in').on('click', function (e) {
+  //   e.preventDefault();
+  //   $('.container').hide();
+  //   $('#log-in').show();
+  // })
+
+  // $('.abt').on('click', function (e) {
+  //   e.preventDefault();
+  //   $('.container').hide();
+  //   $('#abt').show();
+  // })
+
+  // $('.srch').on('click', function (e) {
+  //   e.preventDefault();
+  //   $('.container').hide();
+  //   $('.search-view').show();
+  //   $('.recipe-view').show();
+  // })
+  // // TODO: review the code below for keeping the search form while recipe is shown
   // $('#search').on('click',function(e){
   //   e.preventDefault();
   //   $('.container').hide();
@@ -48,6 +51,11 @@ var app = app || {};
     $('.container').hide();
     $(selector).show();
   };
+
+  // // CHANGE-TODO: This is temporary:
+  // $('.container').hide();
+  // $('.search-view').show();
+  // $('.recipe-view').show();
 
   // DONE-TODO: Create a .render method to compile your Handlebars template.
   module.render = (templateId, data) => {
