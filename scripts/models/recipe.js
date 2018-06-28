@@ -11,11 +11,11 @@ var app = app || {};
     }, this);
 */
     this.recipeName = rawDataObj.recipeName,
-      this.ingredients = rawDataObj.ingredients,
-      this.totalTimeInSeconds = rawDataObj.totalTimeInSeconds,
-      // Need to link to site with instructions
-      this.smallImageUrls = rawDataObj.smallImageUrls,
-      this.id = rawDataObj.id
+    this.ingredients = rawDataObj.ingredients,
+    this.totalTimeInSeconds = rawDataObj.totalTimeInSeconds,
+    // Need to link to site with instructions
+    this.smallImageUrls = rawDataObj.smallImageUrls,
+    this.id = rawDataObj.id
   }
 
   Recipe.all = [];
