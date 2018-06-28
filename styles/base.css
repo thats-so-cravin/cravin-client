@@ -1,4 +1,4 @@
-@media only screen and (max-width: 480px) {
+/* @media only screen and (max-width: 480px) { */
 /* @media only screen and (min-device-width:) */
 
 body{
@@ -7,48 +7,5 @@ body{
     margin:0px auto;
     background-color: azure;
     /* position: relative; */
-}
-
-section{
-    height:80vh;
-}
-
-header{
-    background-color: rgb(255, 0, 0);
-    /* height: 10%; */
-    /* position:relative; */
-    outline:dashed black 1px;
-    position:fixed;
-    width:100vw;
-    display:grid;
-    grid-template-columns:1fr 3fr;
-}
-
-nav{
-    /* margin: 0px auto; */
-    text-align: right;
-    /* position:absolute; */
-    /* right:2; */
-    /* top:38%; */
-    margin-right:5%;
-    /* outline: dashed black 1px; */
-    box-sizing: border-box;
-    padding-top:2.5em;
-    
-}
-
-nav li{
-    display:inline-block;
-    list-style-type: none;
-    padding:5px;
-
-    }
-
-    li a{
-        outline: dashed black 1px;
-        text-decoration: none;
-    }
-
-
-   
-}
+}  
+/* } */

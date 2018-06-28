@@ -1,7 +1,51 @@
-#foodlogo{
-    height: 70px;
-    width: 70px;
-    margin-left: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+
+#srch{
+    outline:dashed black 1px;
+    position: fixed; 
+    height:20%;
+    top:25%;
+    left:25%;
+    transform:translate (-50%, -50%);
+    
+}
+#log-in{
+  outline: dashed 2px blue;
+  outline:dashed black 1px;
+    position: fixed; 
+    height:20%;
+    top:25%;
+    left:25%;
+    transform:translate (-50%, -50%);
+
+}
+
+/* form {
+    height:80vh;
+} */
+
+.recipe-view {
+    padding-top: 40vh;
+}
+
+#hbjs-recipe-template {
+    outline: solid purple 3px;
+}
+
+#image-and-title {
+    position: relative;
+    text-align: center;
+}
+
+#recipe-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+}
+
+#recipe-title {
+    /* position: absolute;
+    bottom: 0;
+    left: 43%;
+    font-size: .75em; */
 }
