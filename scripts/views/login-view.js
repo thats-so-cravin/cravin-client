@@ -3,8 +3,8 @@
 //Lisener for Sign Up button
 $('#sign-up-button').on('click', handleForm);
 
+// CHANGE-TODO: Probably want to delete these at some point if we don't use
 
-// CHANGE-TODO: Probably need to remove these objects
 // const allowedAllergy = {
 //   dairy: {description: 'Dairy-Free', id: 396},
 //   egg: {description: 'Egg-Free', id: 397},
@@ -56,3 +56,8 @@ function handleForm(event) {
   // and use in API call
 
 } // end listener for Sign Up button
+
+function showLogIn() {
+  viewResetter();
+  $('.login-view').show();
+}
