@@ -38,19 +38,11 @@ nav li{
     }
 
    
-    /* footer{
-        background-color: aquamarine;
-        height:500px;
-        margin-top:5px;
-       
-        position:fixed;
-    } */
-
 
     footer{
         background-color:  rgb(255, 0, 0);
         outline:dashed orange 1px;
-        position:fixed;
+        /* position:fixed; */
         width:100vw;
         height: 50px;
         bottom:0;
