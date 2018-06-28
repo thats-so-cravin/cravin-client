@@ -1,4 +1,4 @@
-/* need to make logo size respnsive */
+ @media only screen and (max-width: 480px) { 
 #foodlogo{
     height: 70px;
     width: 70px;
@@ -9,23 +9,17 @@
 
 header{
     background-color: rgb(255, 0, 0);
-    /* height: 10%; */
-    /* position:relative; */
     outline:dashed black 1px;
     position:fixed;
     width:100vw;
     display:grid;
     grid-template-columns:1fr 3fr;
+    z-index: 99;
 }
 
 nav{
-    /* margin: 0px auto; */
     text-align: right;
-    /* position:absolute; */
-    /* right:2; */
-    /* top:38%; */
     margin-right:5%;
-    /* outline: dashed black 1px; */
     box-sizing: border-box;
     padding-top:2.5em;
     
@@ -39,6 +33,34 @@ nav li{
     }
 
     li a{
-        outline: dashed black 1px;
+        outline:dashed black 1px;
         text-decoration: none;
     }
+
+   
+    /* footer{
+        background-color: aquamarine;
+        height:500px;
+        margin-top:5px;
+       
+        position:fixed;
+    } */
+
+
+    footer{
+        background-color:  rgb(255, 0, 0);
+        outline:dashed orange 1px;
+        position:fixed;
+        width:100vw;
+        height: 50px;
+        bottom:0;
+        /* display:grid;
+        grid-template-columns:4fr 3fr; */
+        /* z-index: 99; */
+     }
+
+    /* .me{
+        outline:solid black 1px;
+        padding-top: 40vh;
+    } */
+}

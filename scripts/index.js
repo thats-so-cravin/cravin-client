@@ -18,33 +18,36 @@ var app = app || {};
   // https://codepen.io/RedJokingInn/pen/eGQzYZ
 
   // TODO: review the code below for keeping the search form while recipe is shown
+  function viewResetter () {
+    $('.container').hide();
+  }
 
   // CHANGE-TODO: These may need to be commented back in
-  // $('.log-in').on('click', function (e) {
-  //   e.preventDefault();
-  //   $('.container').hide();
-  //   $('#log-in').show();
-  // })
+  $('.log-in').on('click', function (e) {
+    e.preventDefault();
+    $('.container').hide();
+    $('#log-in').show();
+  })
 
-  // $('.abt').on('click', function (e) {
-  //   e.preventDefault();
-  //   $('.container').hide();
-  //   $('#abt').show();
-  // })
+  $('.abt').on('click', function (e) {
+    e.preventDefault();
+    $('.container').hide();
+    $('#abt').show();
+  })
 
-  // $('.srch').on('click', function (e) {
-  //   e.preventDefault();
-  //   $('.container').hide();
-  //   $('.search-view').show();
-  //   $('.recipe-view').show();
-  // })
-  // // TODO: review the code below for keeping the search form while recipe is shown
-  // $('#search').on('click',function(e){
-  //   e.preventDefault();
-  //   $('.container').hide();
-  //   $('.recipe-view').show();
-  //   $('#srch').show();
-  // })
+  $('.nav-search').on('click', function (e) {
+    e.preventDefault();
+    $('.container').hide();
+    $('.recipe-search-view').show();
+    // $('.recipe-view').show();
+  })
+  // TODO: review the code below for keeping the search form while recipe is shown
+  $('#search-button').on('click',function(e){
+    e.preventDefault();
+    $('.container').hide();
+    $('.recipe-search-view').show();
+    // $('#srch').show();
+  })
 
   // DONE-TODO: Create a .showOnly method to reveal the containers of your single-page app.
   module.showOnly = (selector) => {

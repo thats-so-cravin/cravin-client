@@ -1,3 +1,9 @@
 'use strict';
 
-app.recipeView.initIndexPage();
+// CHANGE-TODO: Why is init recipe view in about-view?
+// app.recipeView.initIndexPage();
+
+function showAbout() {
+    viewResetter();
+    $('.about-view').show();
+}
