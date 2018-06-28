@@ -1,12 +1,20 @@
 'use strict';
 
+// function initSearchAndRecipes() {
+//   // showSearchAndRecipes();
+//   // app.recipeView.initIndexPage();
+//   console.log('initSearchAndRecipes is working!');
+// }
+
+// initSearchAndRecipes();
+
 function showSearchAndRecipes() {
-  viewResetter();
+  app.viewResetter();
   $('.recipe-search-view').show();
 }
 
-//Listener for Sign Up button
-$('#search').on('click', handleSearch);
+//Listener for search button
+$('#search-button').on('click', handleSearch);
 
 function handleSearch(event) {
   event.preventDefault();

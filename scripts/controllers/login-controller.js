@@ -18,7 +18,7 @@ function handleForm(event) {
   $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/thats-so-cravin`, userData)
     .then(console.log(allergyStr, dietStr))
     .catch(console.error);
-    console.log(userData);
+  console.log(userData);
 
 
   // and use in API call
@@ -26,6 +26,6 @@ function handleForm(event) {
 } // end listener for Sign Up button
 
 function initLogIn() {
-    showLogIn();
-    handleForm();
+  showLogIn();
+  handleForm();
 }
