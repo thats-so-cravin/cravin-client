@@ -56,6 +56,6 @@ function handleForm(event) {
 } // end listener for Sign Up button
 
 function showLogIn() {
-  app.viewResetter();
+  viewResetter();
   $('.login-view').show();
 }

@@ -18,6 +18,12 @@ $('#search-button').on('click', handleSearch);
 
 function handleSearch(event) {
   event.preventDefault();
+
+  // get request for current user
+  // if there are allergy/dietary strings, append them to the search
+  // add variables for allergy/diet strings
+  // else continue with search
+
   let searchData = {};
   searchData.first_ing = $('#first-ing').val();
   searchData.second_ing = $('#second-ing').val();
