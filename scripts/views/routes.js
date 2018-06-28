@@ -1,13 +1,9 @@
 'use strict';
 
-var app = app || {};
+page('/', () => fetchAll(), initSearchAndRecipes());
 
-(function(module) {
+page('/about', () => initAbout());
 
-// page('/', loadAll, index);
+page('/login', () => initLogIn());
 
-// page('/about', aboutController.index);
-
-// page('/login', something)
-
-})(app);
+page();

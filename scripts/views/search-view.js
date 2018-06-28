@@ -1,5 +1,10 @@
 'use strict';
 
+function showSearchAndRecipes() {
+  viewResetter();
+  $('.recipe-search-view').show();
+}
+
 //Listener for Sign Up button
 $('#search').on('click', handleSearch);
 

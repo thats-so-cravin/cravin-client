@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="styles/state.css">
 
     <script id="recipe-template" type="text/x-handlebars-template">
-        <div id="hbjs-recipe-template">
+        <div id="each-recipe">
             <div id="image-and-title"> 
                 <img id="recipe-image" src="{{smallImageUrls}}" />
                 <h1 id="recipe-title">{{recipeName}}</h1>
@@ -44,8 +44,8 @@
                 <!-- <div class="icon-menu"></div> -->
 
                 <ul>
-                    <li class="navigator srch" data-content="recipe">
-                        <a href="#srch" class="icon-magnifier">search</a>
+                    <li class="navigator nav-search" data-content="recipe">
+                        <a href="search-form" class="icon-magnifier">search</a>
                     </li>
                     <li class="navigator abt" data-content="about">
                         <a href="#abt" class="icon-about">about us</a>
@@ -64,29 +64,35 @@
 
     <h1>That's So Cravin'</h1>
 
+    <section class="recipe-search-view container">
+        <section class="search-view" id="search-form">
+            <!--TODO:Add search result recipe count-->
+            <form>
+                <fieldset>
+                    <legend>Search</legend>
+                    <legend>ingredient 1:
+                        <input id="first-ing" type="text">
+                    </legend>
+                    <legend>ingredient 2:
+                        <input id="second-ing" type="text">
+                    </legend>
+                    <legend>ingredient 3:
+                        <input id="third-ing" type="text">
+                    </legend>
+                    <legend>ingredient 4:
+                        <input id="fourth-ing" type="text">
+                    </legend>
+                    <button id="search-button" data-id="#">Search</button>
+                </fieldset>
+            </form>
+        </section>
 
-    <section class="search-view">
-        <!--TODO:Add search result recipe count-->
-        <form>
-            <fieldset>
-                <legend>Search</legend>
-                <legend>ingredient 1:
-                    <input id="first-ing" type="text">
-                </legend>
-                <legend>ingredient 2:
-                    <input id="second-ing" type="text">
-                </legend>
-                <legend>ingredient 3:
-                    <input id="third-ing" type="text">
-                </legend>
-                <legend>ingredient 4:
-                    <input id="fourth-ing" type="text">
-                </legend>
-                <button id="search" data-id="#">Search</button>
-            </fieldset>
-        </form>
+        <section class="recipe-view">
+            <section id="recipe-count"></section>
+            <section id="recipe-list"></section>
+        </section>
+
     </section>
-
     <section class="login-view container" id="log-in">
         <form>
             <fieldset>
@@ -133,14 +139,22 @@
     <!-- // code above to be commented back in  -->
     <section class="error-view container"></section>
 
+    <!--TODO:Add photos and paragraphs for each team member-->
     <section class="about-view container" id="abt">
-        <!--TODO:Add photos and paragraphs for each team member-->
+        <div class="me" id="nick">
+            <img src="http://placehold.it/100x100" />
+        </div>
+        <div class="me" id="sara">
+            <img src="http://placehold.it/100x100" />
+        </div>
+        <div class="me" id="suzanne">
+            <img src="http://placehold.it/100x100" />
+        </div>
+        <div class="me" id="tara">
+            <img src="http://placehold.it/100x100" />
+        </div>
     </section>
 
-    <section class="recipe-view container">
-        <section id="recipe-count"></section>
-        <section id="recipe-list"></section>
-    </section>
 
 
     <!--TODO: Add footer content-->
@@ -151,8 +165,18 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+
     <script src="scripts/index.js"></script>
+
+    <!-- Models -->
     <script src="scripts/models/recipe.js"></script>
+
+    <!-- Controllers -->
+    <script src="scripts/controllers/search-recipe-controller.js"></script>
+    <script src="scripts/controllers/login-controller.js"></script></script>
+    <script src="scripts/controllers/about-controller.js"></script>
+
+    <!-- Views -->
     <script src="scripts/views/routes.js"></script>
     <script src="scripts/views/recipe-view.js"></script>
     <script src="scripts/views/search-view.js"></script>
