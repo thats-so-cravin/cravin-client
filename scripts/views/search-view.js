@@ -17,7 +17,7 @@ function handleSearch(event) {
 
   console.log(searchStr);
 
-  $.get(`http://api.yummly.com/v1/api/recipes?_app_id=78c6217b&_app_key=084d45aa3306778e2ebbc3148fdaab96${searchStr}${allergyStr}${dietStr}`, data => {console.log(data)})
+  $.get(`http://api.yummly.com/v1/api/recipes?_app_id=78c6217b&_app_key=084d45aa3306778e2ebbc3148fdaab96${searchStr}`/*${allergyStr}${dietStr}`*/, data => {console.log(data)})
 
     app.Recipe.fetchAll(app.Recipe.loadAll, searchStr);
 

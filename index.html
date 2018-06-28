@@ -13,9 +13,11 @@
     <link rel="stylesheet" type="text/css" href="styles/state.css">
 
     <script id="recipe-template" type="text/x-handlebars-template">
-        <div> 
-            <img src="{{smallImageUrls}}" />
-            <h1 id="title">{{recipeName}}</h1>
+        <div id="hbjs-recipe-template">
+            <div id="image-and-title"> 
+            <img id="recipe-image" src="{{smallImageUrls}}" />
+            <h1 id="recipe-title">{{recipeName}}</h1>
+            </div>
             <ul id="ingredients-list">{{ingredients}}</ul>
             <p id="total-time">{{totalTimeInSeconds}}</p> 
             <!--TODO:Add source site URL to handlebar template -->
@@ -87,45 +89,45 @@
     </section>
 
     <section class="login-view container" id="log-in">
-        <h2>Sign Up</h2>
         <form>
             <fieldset>
-                <legend>Sign Up</legend>
-                <legend>Username:
-                    <input id="username" type="text">
-                </legend>
-                <legend>Password:
-                    <input id="password" type="text">
-                    <div id="food-prefs">
-                        <legend>Dietary Preferences:</legend>
-                        <!-- Allergies List; CHANGE-TODO: can create seperate select form later -->
-                        <select id="allowedAllergy">
-                            <option id="no-allergy">Select an Allergy</option>
-                            <option id="396^Dairy-Free">Dairy-Free</option>
-                            <option id="397^Egg-Free">Egg-Free</option>
-                            <option id="393^Gluten-Free">Gluten-Free</option>
-                            <option id="394^Peanut-Free">Peanut-Free</option>
-                            <option id="398^Peanut-Free">Seafood-Free</option>
-                            <option id="399^Sesame-Free">Sesame-Free</option>
-                            <option id="400^Soy-Free">Soy-Free</option>
-                            <option id="401^Sulfite-Free">Sulfite-Free</option>
-                            <option id="395^TreeNut-Free">Tree Nut-Free</option>
-                            <option id="392^Wheat-Free">Wheat-Free</option>
-                        </select>
+                <legend>Sign Up
+                    <legend>Username:
+                        <input id="username" type="text">
+                    </legend>
+                    <legend>Password:
+                        <input id="password" type="text">
+                        <div id="food-prefs">
+                            <legend>Dietary Preferences:</legend>
+                            <!-- Allergies List; CHANGE-TODO: can create seperate select form later -->
+                            <select id="allowedAllergy">
+                                <option id="no-allergy">Select an Allergy</option>
+                                <option id="396^Dairy-Free">Dairy-Free</option>
+                                <option id="397^Egg-Free">Egg-Free</option>
+                                <option id="393^Gluten-Free">Gluten-Free</option>
+                                <option id="394^Peanut-Free">Peanut-Free</option>
+                                <option id="398^Peanut-Free">Seafood-Free</option>
+                                <option id="399^Sesame-Free">Sesame-Free</option>
+                                <option id="400^Soy-Free">Soy-Free</option>
+                                <option id="401^Sulfite-Free">Sulfite-Free</option>
+                                <option id="395^TreeNut-Free">Tree Nut-Free</option>
+                                <option id="392^Wheat-Free">Wheat-Free</option>
+                            </select>
 
-                        <!-- Diet List; CHANGE-TODO: can create seperate select form later -->
-                        <select id="allowedDiet">
-                            <option id="no-diet">Select a Diet</option>
-                            <option id="388^Lacto-Vegetarian">Lacto-Vegetarian</option>
-                            <option id="389^Ovo-Vegetarian">Ovo-Vegetarian</option>
-                            <option id="390^Pescetarian">Pescetarian</option>
-                            <option id="386^Vegan">Vegan</option>
-                            <option id="387^Vegetarian">Vegetarian</option>
-                            <option id="403^Paleo">Paleo</option>
-                        </select>
-                    </div>
+                            <!-- Diet List; CHANGE-TODO: can create seperate select form later -->
+                            <select id="allowedDiet">
+                                <option id="no-diet">Select a Diet</option>
+                                <option id="388^Lacto-Vegetarian">Lacto-Vegetarian</option>
+                                <option id="389^Ovo-Vegetarian">Ovo-Vegetarian</option>
+                                <option id="390^Pescetarian">Pescetarian</option>
+                                <option id="386^Vegan">Vegan</option>
+                                <option id="387^Vegetarian">Vegetarian</option>
+                                <option id="403^Paleo">Paleo</option>
+                            </select>
+                        </div>
+                    </legend>
+                    <button id="sign-up-button" data-id="#">Submit</button>
                 </legend>
-                <button id="sign-up-button" data-id="#">Sign Up</button>
             </fieldset>
         </form>
     </section>
@@ -135,7 +137,7 @@
     <section class="about-view container" id="abt">
         <!--TODO:Add photos and paragraphs for each team member-->
     </section>
-    
+
     <section class="recipe-view container">
         <section id="recipe-count"></section>
         <section id="recipe-list"></section>
@@ -160,11 +162,16 @@
     <script src="scripts/views/about-view.js"></script>
 
     <script> 
-				$( document ).ready(function() {
-				console.log( "document ready!" );
-				app.Recipe.fetchAll(app.recipeView.initIndexPage);
-				});
-			</script>
+        $(document).ready(function () {
+            console.log("document ready!");
+            app.Recipe.fetchAll(app.recipeView.initIndexPage);
+
+            // // CHANGE-TODO: This is temporary:
+            // $('.container').hide();
+            // $('#srch').show();
+            // $('.recipe-view').show();
+        });
+    </script>
 
 </body>
 
