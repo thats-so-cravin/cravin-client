@@ -15,24 +15,22 @@
     <script id="recipe-template" type="text/x-handlebars-template">
         <div id="hbjs-recipe-template">
             <div id="image-and-title"> 
-            <img id="recipe-image" src="{{smallImageUrls}}" />
-            <h1 id="recipe-title">{{recipeName}}</h1>
+                <img id="recipe-image" src="{{smallImageUrls}}" />
+                <h1 id="recipe-title">{{recipeName}}</h1>
             </div>
             <ul id="ingredients-list">{{ingredients}}</ul>
-						<p id="total-time">{{totalTimeInSeconds}}</p>
-						<button id="recipe-button"><a href="#">Recipe instructions</a></button>
+			<p id="total-time">{{totalTimeInSeconds}}</p>
+			<a href="#" id="recipe-link" name="{{id}}">Recipe instructions</a>
             <!--TODO:Add source site URL to handlebar template -->
     	</div>
     </script>
-
     <!--TODO: Insert MetaData to create pin image-->
     <!--<html prefix="og: http://ogp.me/ns#">
-
-<title>The Rock (1996)</title>
-<meta property="og:title" content="The Rock" />
-<meta property="og:type" content="video.movie" />
-<meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />
-<meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />-->
+    <title>The Rock (1996)</title>
+    <meta property="og:title" content="The Rock" />
+    <meta property="og:type" content="video.movie" />
+    <meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />
+    <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />-->
 </head>
 
 <body>
@@ -67,7 +65,7 @@
     <h1>That's So Cravin'</h1>
 
 
-    <section class="search-view container" id="srch">
+    <section class="search-view">
         <!--TODO:Add search result recipe count-->
         <form>
             <fieldset>
@@ -165,7 +163,7 @@
     <script> 
         $(document).ready(function () {
             console.log("document ready!");
-            app.Recipe.fetchAll(app.recipeView.initIndexPage);
+            app.Recipe.fetchAll(app.recipeView.initIndexPage, '');
 
             // // CHANGE-TODO: This is temporary:
             // $('.container').hide();
