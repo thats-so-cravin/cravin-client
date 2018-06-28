@@ -1,0 +1,25 @@
+@media only screen and (max-width: 480px) {
+
+
+
+    #srch{
+        outline:dashed black 1px;
+        position: fixed; 
+        height:20%;
+        top:25%;
+        left:25%;
+        transform:translate (-50%, -50%);
+        
+    }
+    #log-in{
+      outline: dashed 2px blue;
+      outline:dashed black 1px;
+        position: fixed; 
+        height:20%;
+        top:25%;
+        left:25%;
+        transform:translate (-50%, -50%);
+
+    }
+
+}
