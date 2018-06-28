@@ -17,6 +17,9 @@ var app = app || {};
   //TODO: hide/show nave menu
   // https://codepen.io/RedJokingInn/pen/eGQzYZ
 
+  // TODO: review the code below for keeping the search form while recipe is shown
+
+  // CHANGE-TODO: These may need to be commented back in
   // $('.log-in').on('click', function (e) {
   //   e.preventDefault();
   //   $('.container').hide();
