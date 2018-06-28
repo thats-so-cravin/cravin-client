@@ -1,17 +1,16 @@
 @media only screen and (max-width: 480px) {
-
+/* @media only screen and (min-device-width:) */
 
 body{
     width: 100%;
     height:100%;
     margin:0px auto;
+    background-color: azure;
+    /* position: relative; */
 }
+
 section{
-    height:100vh;
-}
-#body{
-    background-color: rgb(255, 0, 0);
-    opacity:0.2;
+    height:80vh;
 }
 
 header{
@@ -24,6 +23,7 @@ header{
     display:grid;
     grid-template-columns:1fr 3fr;
 }
+
 nav{
     /* margin: 0px auto; */
     text-align: right;
@@ -35,23 +35,20 @@ nav{
     box-sizing: border-box;
     padding-top:2.5em;
     
-
-    
-    
 }
+
 nav li{
     display:inline-block;
     list-style-type: none;
     padding:5px;
-    
-    
 
     }
+
     li a{
         outline: dashed black 1px;
         text-decoration: none;
     }
-    .login-view{
-        background-color: blue;
-    }
+
+
+   
 }

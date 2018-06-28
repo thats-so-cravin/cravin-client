@@ -13,11 +13,11 @@
     <link rel="stylesheet" type="text/css" href="styles/state.css">
 
     <script id="recipe-template" type="text/x-handlebars-template">
-        <div>
+        <div> 
             <img src="{{smallImageUrls}}" />
             <h1 id="title">{{recipeName}}</h1>
             <ul id="ingredients-list">{{ingredients}}</ul>
-            <p id="total-time">{{totalTimeInSeconds}}</p>
+            <p id="total-time">{{totalTimeInSeconds}}</p> 
             <!--TODO:Add source site URL to handlebar template -->
     </div>
     </script>
@@ -43,17 +43,17 @@
                 <!-- <div class="icon-menu"></div> -->
 
                 <ul>
-                    <li class="navigator" data-content="recipe">
-                        <a href="#" class="icon-magnifier">search</a>
+                    <li class="navigator srch" data-content="recipe">
+                        <a href="#srch" class="icon-magnifier">search</a>
                     </li>
-                    <li class="navigator" data-content="about">
-                        <a href="#" class="icon-about">about us</a>
+                    <li class="navigator abt" data-content="about">
+                        <a href="#abt" class="icon-about">about us</a>
                     </li>
                     <li class="navigator log-in" data-content="login">
-                        <a href="#log-in" class="icon-about">log in</a>
+                        <a href="#log-in" class="icon-login">log in</a>
 
                         <li class="navigator" data-content="My Account">
-                            <a href="#" class="icon-about">my account</a>
+                            <a href="#" class="icon-account">my account</a>
                         </li>
                 </ul>
 
@@ -63,12 +63,8 @@
 
     <h1>That's So Cravin'</h1>
 
-    <section class="recipe-view">
-        <section id="recipe-count"></section>
-        <section id="recipe-list"></section>
-    </section>
 
-    <section class="search-view container">
+    <section class="search-view container" id="srch">
         <!--TODO:Add search result recipe count-->
         <form>
             <fieldset>
@@ -136,9 +132,15 @@
     <!-- // code above to be commented back in  -->
     <section class="error-view container"></section>
 
-    <section class="about-view container">
+    <section class="about-view container" id="abt">
         <!--TODO:Add photos and paragraphs for each team member-->
     </section>
+    
+    <section class="recipe-view container">
+        <section id="recipe-count"></section>
+        <section id="recipe-list"></section>
+    </section>
+
 
     <!--TODO: Add footer content-->
     <footer></footer>
