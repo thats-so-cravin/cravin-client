@@ -6,4 +6,6 @@ var app = app || {};
 
   Users.all = [];
 
+  function CurrentUser(DB)
+
 })(app);

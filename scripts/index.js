@@ -47,18 +47,19 @@ var app = app || {};
     $('.container').hide();
     $('.recipe-search-view').show();
     // $('#srch').show();
+
   })
 
   // DONE-TODO: Create a .showOnly method to reveal the containers of your single-page app.
-  module.showOnly = (selector) => {
-    $('.container').hide();
-    $(selector).show();
-  };
+  // module.showOnly = (selector) => {
+  //   $('.container').hide();
+  //   $(selector).show();
+  // };
 
   // // CHANGE-TODO: This is temporary:
-  // $('.container').hide();
-  // $('.search-view').show();
-  // $('.recipe-view').show();
+  $('.container').hide();
+  $('.search-view').show();
+  $('.recipe-view').show();
 
   // DONE-TODO: Create a .render method to compile your Handlebars template.
   module.render = (templateId, data) => {
