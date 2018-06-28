@@ -1,11 +1,12 @@
 
 #search-form{
     /* outline:dashed black 1px; */
-    position: fixed; 
+    position: absolute; 
     height:20%;
     top:20%;
     left:34%;
     transform:translate (-50%, -50%); 
+    z-index: 0;
     
 }
 
@@ -48,10 +49,14 @@
 
 .recipe-view {
     padding-top: 40vh;
+    /* z-index: 99; */
 }
 
 #each-recipe {
-    outline: solid purple 3px;
+    outline: solid black 1px;
+    background-color:rgb(110, 109, 104);
+    z-index: 3;
+
 }
 
 #image-and-title {
@@ -98,11 +103,6 @@
     
 }
 
-fieldset{
-    /* position:relative; */
-   
-    
-}
 
 
 
