@@ -69,39 +69,40 @@
             <!--TODO:Add search result recipe count-->
             <form>
                 <fieldset>
-                    <legend>Search</legend>
-                    <legend>ingredient 1:
-                        <input id="first-ing" type="text">
+                    <legend>INGREDIENTS</legend>
+                    <legend>
+                        <input id="first-ing" class="box" placeholder="#1" type="text">
                     </legend>
-                    <legend>ingredient 2:
-                        <input id="second-ing" type="text">
+                    <legend>
+                        <input id="second-ing" class="box" placeholder="#2" type="text">
                     </legend>
-                    <legend>ingredient 3:
-                        <input id="third-ing" type="text">
+                    <legend>
+                        <input id="third-ing" class="box" placeholder="#3" type="text">
                     </legend>
-                    <legend>ingredient 4:
-                        <input id="fourth-ing" type="text">
+                    <legend>
+                        <input id="fourth-ing" class="box" placeholder="#4" type="text">
                     </legend>
-                    <button id="search-button" data-id="#">Search</button>
                 </fieldset>
+                <button id="search-button" class="box" data-id="#">Search</button>
             </form>
         </section>
 
-        <section class="recipe-view">
+        <!-- <section class="recipe-view">
             <section id="recipe-count"></section>
             <section id="recipe-list"></section>
-        </section>
+        </section> -->
 
     </section>
+
     <section class="login-view container" id="log-in">
-        <form>
+        <form id="login-box">
             <fieldset>
-                <legend>Sign Up
-                    <legend>Username:
-                        <input id="username" type="text">
+                <legend>Sign Up/ Sign In</legend>
+                    <legend>
+                        <input id="username" placeholder="Username"  type="text">
                     </legend>
-                    <legend>Password:
-                        <input id="password" type="text">
+                    <legend>
+                        <input id="password" placeholder="Password" type="text">
                         <div id="food-prefs">
                             <legend>Dietary Preferences:</legend>
                             <!-- Allergies List; CHANGE-TODO: can create seperate select form later -->
@@ -132,7 +133,7 @@
                         </div>
                     </legend>
                     <button id="sign-up-button" data-id="#">Submit</button>
-                </legend>
+                <!-- </legend> -->
             </fieldset>
         </form>
     </section>
@@ -143,15 +144,22 @@
     <section class="about-view container" id="abt">
         <div class="me" id="nick">
             <img src="http://placehold.it/100x100" />
+            <p>dkhadkhadadv aihduagd uadagaf ug da</p>
         </div>
         <div class="me" id="sara">
             <img src="http://placehold.it/100x100" />
+                <p>I immigrated from Iran to the US about 7 years ago not knowing how to speak English. I worked at one of the
+                    top 5 architecture firms in the US, ZGF. At the same time I got my M.S. degree in Engineering and Technology
+                    Management (ETM) from PSU.
+                </p>
         </div>
         <div class="me" id="suzanne">
             <img src="http://placehold.it/100x100" />
+            <p>dkhadkhadadv aihduagd uadagaf ug da</p>
         </div>
         <div class="me" id="tara">
             <img src="http://placehold.it/100x100" />
+            <p>dkhadkhadadv aihduagd uadagaf ug da</p>
         </div>
     </section>
 

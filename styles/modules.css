@@ -1,22 +1,49 @@
 
 #search-form{
-    outline:dashed black 1px;
+    /* outline:dashed black 1px; */
     position: fixed; 
     height:20%;
-    top:25%;
-    left:25%;
-    transform:translate (-50%, -50%);
+    top:20%;
+    left:34%;
+    transform:translate (-50%, -50%); 
     
 }
 
+
 #log-in{
-  outline: dashed 2px blue;
-  outline:dashed black 1px;
+  /* outline:dashed black 1px; */
     position: fixed; 
     height:20%;
     top:25%;
     left:25%;
     transform:translate (-50%, -50%);
+    display: grid;
+}
+#log-in legend{
+    margin:auto;
+    font: bold
+}
+
+#username{
+    width:200px;
+    padding: 10px;
+    margin-bottom:10px;
+    margin-top:10px;
+    border-bottom: 2px black solid;
+    
+}
+
+#password{
+    width:200px;
+    padding: 10px;
+    border-bottom: 2px black solid;
+}
+
+
+#login-box{
+    margin:auto;
+    text-align: center;
+    padding:10px;
 }
 
 .recipe-view {
@@ -42,7 +69,41 @@
 
 
 .about-view{
-    padding-top: 20vh;
-    position:fixed;
+    padding-top: 16vh;
+    width:95%;
+    margin-left:10px;
 }
+
+
+
+.me{
+    position:relative;
+    display:grid;
+    grid-template-columns: 0fr 3fr;
+    padding:5px;
+
+}
+
+.me p{
+    font-size: 14px;
+    margin-left:20px;
+
+}
+
+.box{
+    outline: solid gray 1px;
+    margin:2px;
+    /* position:absolute; */
+    display:inline-block;
+    
+}
+
+fieldset{
+    /* position:relative; */
+   
+    
+}
+
+
+
 
