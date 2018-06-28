@@ -11,10 +11,11 @@ var app = app || {};
     }, this);
 */
     this.recipeName = rawDataObj.recipeName,
-      this.ingredients = rawDataObj.ingredients,
-      this.totalTimeInSeconds = rawDataObj.totalTimeInSeconds,
-      // Need to link to site with instructions
-      this.smallImageUrls = rawDataObj.smallImageUrls
+    this.ingredients = rawDataObj.ingredients,
+    this.totalTimeInSeconds = rawDataObj.totalTimeInSeconds,
+    // Need to link to site with instructions
+    this.smallImageUrls = rawDataObj.smallImageUrls,
+    this.id = rawDataObj.id
   }
 
   Recipe.all = [];
@@ -45,6 +46,14 @@ var app = app || {};
         callback(results.matches);
       }).catch(err => console.log(err));
   }
+
+  // TODO: Need to get sourceRecipeUrl for each recipe
+  Recipe.viewInstructions = () => {
+    $.get(`http://api.yummly.com/v1/api/recipe/${id}?_app_id=78c6217b&_app_key=084d45aa3306778e2ebbc3148fdaab96`, data => {console.log(data)})
+      .then(results => {
+        console.log(results);
+      })
+  };
 
   //TODO: Add loadOne for whatever they click on
   // Recipe.fetchAll = callback => {
