@@ -4,6 +4,6 @@
 // app.recipeView.initIndexPage();
 
 function showAbout() {
-    viewResetter();
+    app.viewResetter();
     $('.about-view').show();
 }
