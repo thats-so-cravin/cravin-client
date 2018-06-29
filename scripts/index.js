@@ -29,6 +29,12 @@ var app = app || {};
     $('#log-in').show();
   })
 
+  $('.signup').on('click', function (e) {
+    e.preventDefault();
+    $('.container').hide();
+    $('#sign-up').show();
+  })
+
   $('.abt').on('click', function (e) {
     e.preventDefault();
     $('.container').hide();

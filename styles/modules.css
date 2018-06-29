@@ -1,33 +1,58 @@
+/* .container{
+    outline:dashed black 1px;
+} */
 
 #search-form{
-    /* outline:dashed black 1px; */
-    /* position: absolute;  */
-    /* height:20%; */
-    /* top:30%;
-    left:34%;
-    transform:translate (-50%, -50%);  */
-    /* z-index: 0; */
-    
-    width: 50%;
-    margin:auto;
+    /* outline: dashed black 1px; */
+    width: 400px;
+    text-align: center;
+    margin: 20px auto 0px auto;
 }
 
-.container{
-    outline:dashed black 1px;
+.input-box{
+    /* outline: solid gray 1px; */
+   margin: 5px;
+   padding: 10px 0px 10px 10px;
+   box-sizing: border-box;
 }
 
-.box{
-    outline: solid gray 1px;
-   /* margin:2px; */
-   /* position:absolute; */
-   /* display:inline-block;  */
-   /* width:70%; */
-   /* padding: 20px; */
-   /* margin:5px; */
-   /* border-bottom: 2px black solid; */
-   
+form input {
+    width: 100%;
 }
 
+form h2 {
+    padding-bottom: 10px;
+    font-size: 1.7em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+select {
+    padding: 10px 0px 10px 10px;
+    display: inline-block;
+    width: 45%;
+    margin: 0px 8px 0px 8px;
+}
+
+.button {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #2980b9);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #2980b9);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #2980b9);
+    background-image: -o-linear-gradient(top, #3cb0fd, #2980b9);
+    background-image: linear-gradient(to bottom, #3cb0fd, #2980b9);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Arial;
+    color:rgb(245, 241, 241);
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    border: 0px;
+    width: 80%;
+    margin-top: 10px;
+  }
 
 #log-in{
   /* outline:dashed black 1px; */
@@ -38,26 +63,22 @@
     transform:translate (-50%, -50%);
     display: grid;
 }
+
 #log-in legend{
     margin:auto;
     font: bold
 }
 
-#username{
-    width:200px;
-    padding: 10px;
-    margin-bottom:10px;
-    margin-top:10px;
-    border-bottom: 2px black solid;
-    
+.signup-view{
+    width: 400px;
+    text-align: center;
+    margin: 20px auto 0px auto;
 }
 
-#password{
-    width:200px;
-    padding: 10px;
-    border-bottom: 2px black solid;
+#food-prefs {
+    margin: 30px auto 0px auto;
+    width: 100%;
 }
-
 
 #login-box{
     margin:auto;
@@ -71,54 +92,106 @@
     padding:10px;
 }
 
+#sign-up button {
+    margin: 40px auto;
+}
+
 .recipe-view {
-    padding-top: 40vh;
-    /* z-index: 99; */
+    padding-top: 40px;
 }
 
 #each-recipe {
-    outline: solid black 1px;
-    background-color:rgb(110, 109, 104);
-    /* z-index: 3; */
-
+    position: relative;
+    height: 200px;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 #image-and-title {
+    /* outline: 1px red solid; */
     position: relative;
-    text-align: center;
+    /* padding: 10px 0px; */
+}
+
+#recipe-title{
+    padding: 10px;
+    background-color: black;
+    opacity: .85;
+    color:  rgb(245, 241, 241);
+    font-size: 1.2em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
 }
 
 #recipe-image {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width:100%;
-    height:100;
+    position: absolute;
+    left: 0px;
+    width: 200px;
 }
 
+#ingredients-list {
+    position: absolute;
+    width: 52%;
+    margin: 10px 10px 10px 220px;
+    word-wrap: break-word;
+}
+
+#recipe-link {
+    position: absolute;
+}
+
+.recipe-button {
+    margin: 133px 0px 0px 0px;
+    padding: 8px;
+    font-size: .9em;
+    background-color: rgb(187, 183, 183);
+    color:black;
+    border: 0px;
+    width: 185px;
+    text-align: center;
+    font-weight: 600;
+}
+
+a  {
+    text-decoration: none;
+}
 
 .about-view{
-    padding-top: 16vh;
     width:95%;
     margin-left:10px;
 }
-
-
 
 .me{
     position:relative;
     display:grid;
     grid-template-columns: 0fr 3fr;
-    padding:5px;
-
+    padding:20px 5px;
 }
 
 .me p{
     font-size: 14px;
-    margin-left:20px;
-
+    margin-left:10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
 }
 
+.me h1 {
+    margin-left: 10px;
+}
 
+.me img {
+    width: 120px;
+}
 
-
+footer {
+    padding: 10px;
+    font-size: .7em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color:  rgb(245, 241, 241);
+    text-align: center;
+    background-color:  black;
+    opacity: .85;
+}
