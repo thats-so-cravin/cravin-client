@@ -167,7 +167,7 @@ a  {
     position:relative;
     display:grid;
     grid-template-columns: 0fr 3fr;
-    padding:20px 5px;
+    margin:20px 5px;
 }
 
 .me p{
@@ -181,8 +181,17 @@ a  {
     margin-left: 10px;
 }
 
-.me img {
+.about-photo {
     width: 120px;
+}
+
+/* .my-links {
+    position: relative;
+} */
+
+.my-link-images {
+    padding-left: 5px;
+    margin-top: 5px;
 }
 
 footer {

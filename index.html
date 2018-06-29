@@ -39,9 +39,11 @@
     <header>
         <div>
             <img id="foodlogo" src="./img/food.png" />
-            <h1>that's so <strong>cravin'</strong></h1>
+            <h1>that's so
+                <strong>cravin'</strong>
+            </h1>
         </div>
-        
+
         <!-- Navigation -->
         <nav>
             <!-- <div class="icon-menu"></div> -->
@@ -54,7 +56,7 @@
                 </li>
                 <li class="navigator signup" data-content="signup">
                     <a href="#sign-up" class="icon-login">sign up</a>
-                <!-- <li class="navigator" data-content="My Account">
+                    <!-- <li class="navigator" data-content="My Account">
                     <a href="#" class="icon-account">my account</a>
                 </li> -->
             </ul>
@@ -67,7 +69,9 @@
             <!--TODO:Add search result recipe count-->
             <form>
                 <fieldset>
-                    <legend><h2>what's in your fridge?</h2></legend>
+                    <legend>
+                        <h2>what's in your fridge?</h2>
+                    </legend>
                     <legend>
                         <input id="first-ing" class="input-box" placeholder="add an ingredient" type="text">
                     </legend>
@@ -96,14 +100,18 @@
     <section class="signup-view container" id="sign-up">
         <form id="signup-box">
             <fieldset>
-                <legend><h2>Sign Up</h2></legend>
+                <legend>
+                    <h2>Sign Up</h2>
+                </legend>
                 <legend>
                     <input id="username" placeholder="Username" type="text" class="input-box">
                 </legend>
                 <legend>
                     <input id="password" placeholder="Password" type="text" class="input-box">
                     <div id="food-prefs">
-                        <legend><h2>dietary preferences</h2></legend>
+                        <legend>
+                            <h2>dietary preferences</h2>
+                        </legend>
                         <!-- Allergies List; CHANGE-TODO: can create seperate select form later -->
                         <select id="allowedAllergy" class="select">
                             <option id="no-allergy">Select an Allergy</option>
@@ -155,31 +163,68 @@
     <!--TODO:Add photos and paragraphs for each team member-->
     <section class="about-view container" id="abt">
         <div class="me" id="nick">
-            <img src="img/nicklas.jpg" />
+            <img class="about-photo" src="img/nicklas.jpg" />
             <div>
                 <h1>Nick Di Pietro</h1>
-                <p>Nicklas is from Southern California; here since 2011. He's a fan of beer. In his offtime he's also a fan of Pugs, 3D modeling, and of course video games / coding.</p>
+                <p>Nicklas is from Southern California; here since 2011. He's a fan of beer. In his offtime he's also a fan
+                    of Pugs, 3D modeling, and of course video games / coding.</p>
+                    <div class="my links"></div>
+                <a href="https://www.linkedin.com/in/nicklasdipietro/">
+                    <img class="my-link-images linkedin-image" border="0" alt="Nicklas' Linkedin" src="img/linkedin.png" width="30">
+                </a>
+                <a href="https://github.com/Seiyaroo">
+                    <img class="my-link-images github-image" border="0" alt="Nicklas' Github" src="img/github.png" width="30">
+                </a>
+                </div>
             </div>
         </div>
         <div class="me" id="sara">
-            <img src="img/sara.png" />
+            <img class="about-photo" src="img/sara.png" />
             <div>
                 <h1>Sara Bahrini</h1>
-                <p>I immigrated from Iran to the US about 7 years ago not knowing how to speak English. I worked at one of the top 5 architecture firms in the US, ZGF. At the same time I got my M.S. degree in Engineering and Technology Management (ETM) from PSU.</p>
+                <p>Sara immigrated to the US 7 years ago without knowing English. She worked at one of the
+                    top 5 architecture firms, while simultaneously getting her M.S. degree in Engineering and Technology
+                    Management from PSU.</p>
+                    <div class="my links"></div>
+                <a href="https://www.linkedin.com/in/sara-bahrini/">
+                    <img class="my-link-images linkedin-image" border="0" alt="Sara's Linkedin" src="img/linkedin.png" width="30">
+                </a>
+                <a href="https://github.com/sarabahrini">
+                    <img class="my-link-images github-image" border="0" alt="Sara's Github" src="img/github.png" width="30">
+                </a>
+                </div>
             </div>
         </div>
         <div class="me" id="suzanne">
-            <img src="img/Suzanne.jpg" />
+            <img class="about-photo" src="img/Suzanne.jpg" />
             <div>
                 <h1>Suzanne Leber</h1>
-                <p>dkhadkhadadv aihduagd uadagaf ug da</p>
+                <p>A full-stack Javascript developer, one-woman think tank, and aficionado of all things cute. Suzanne hopes
+                    to find an opportunity to put her creative problem solving-skills to use with a people-first organization.</p>
+                    <div class="my links"></div>
+                <a href="https://www.linkedin.com/in/suzanneleber/">
+                    <img class="my-link-images linkedin-image" border="0" alt="Suzanne's Linkedin" src="img/linkedin.png" width="30">
+                </a>
+                <a href="https://github.com/muddledsignal">
+                    <img class="my-link-images github-image" border="0" alt="Suzanne's Github" src="img/github.png" width="30">
+                </a>
+                </div>
             </div>
         </div>
         <div class="me" id="tara">
-            <img src="img/tara.jpg" />
+            <img class="about-photo" src="img/tara.jpg" />
             <div>
                 <h1>Tara Johnson</h1>
-                <p>A user experience designer with a passion for digging into and solving problems looking to transition into software development. Raised in Cleveland, she is a super fan of all Cleveland sports teams.#whateverittakes</p>
+                <p>A user experience designer with a passion for digging into and solving problems looking to transition into
+                    software development. Raised in Cleveland, she is a super fan of all Cleveland sports teams.#whateverittakes</p>
+                <div class="my links">
+                    <a href="http://www.linkedin.com/in/tarabjohnson">
+                        <img class="my-link-images linkedin-image" border="0" alt="Tara's Linkedin" src="img/linkedin.png" width="30">
+                    </a>
+                    <a href="https://github.com/tara-johnson">
+                        <img class="my-link-images github-image" border="0" alt="Tara's Github" src="img/github.png" width="30">
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -224,4 +269,5 @@
         });
     </script>
 </body>
+
 </html>
