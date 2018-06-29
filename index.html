@@ -84,6 +84,36 @@
                     <legend>
                         <input id="fourth-ing" class="input-box" placeholder="add an ingredient" type="text">
                     </legend>
+                    <div id="food-prefs">
+                        <legend>
+                            <h2>dietary preferences</h2>
+                        </legend>
+                        <!-- Allergies List; CHANGE-TODO: can create seperate select form later -->
+                        <select id="allowedAllergy" class="select">
+                            <option id="no-allergy">Select an Allergy</option>
+                            <option id="396^Dairy-Free">Dairy-Free</option>
+                            <option id="397^Egg-Free">Egg-Free</option>
+                            <option id="393^Gluten-Free">Gluten-Free</option>
+                            <option id="394^Peanut-Free">Peanut-Free</option>
+                            <option id="398^Peanut-Free">Seafood-Free</option>
+                            <option id="399^Sesame-Free">Sesame-Free</option>
+                            <option id="400^Soy-Free">Soy-Free</option>
+                            <option id="401^Sulfite-Free">Sulfite-Free</option>
+                            <option id="395^TreeNut-Free">Tree Nut-Free</option>
+                            <option id="392^Wheat-Free">Wheat-Free</option>
+                        </select>
+
+                        <!-- Diet List; CHANGE-TODO: can create seperate select form later -->
+                        <select id="allowedDiet" class="select">
+                            <option id="no-diet">Select a Diet</option>
+                            <option id="388^Lacto-Vegetarian">Lacto-Vegetarian</option>
+                            <option id="389^Ovo-Vegetarian">Ovo-Vegetarian</option>
+                            <option id="390^Pescetarian">Pescetarian</option>
+                            <option id="386^Vegan">Vegan</option>
+                            <option id="387^Vegetarian">Vegetarian</option>
+                            <option id="403^Paleo">Paleo</option>
+                        </select>
+                    </div>
                 </fieldset>
                 <button id="search-button" data-id="#" class="button">Search</button>
             </form>
