@@ -1,51 +1,79 @@
- @media only screen and (max-width: 480px) { 
+ /* @media only screen and (max-width: 480px) {  */
 #foodlogo{
-    height: 70px;
-    width: 70px;
+    height: 4em;
+    /* width: 1em; */
     margin-left: 1em;
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
 header{
-    background-color: rgb(255, 0, 0);
-    outline:dashed black 1px;
+    /* background-color: rgb(255, 0, 0); */
+    background-color: black;
+    opacity: 0.85;
+    /* filter: alpha(opacity=0); */
+    /* outline:dashed black 1px; */
     position:fixed;
     width:100vw;
-    display:grid;
-    grid-template-columns:1fr 3fr;
+    /* display:grid;
+    grid-template-columns:1fr 3fr; */
     z-index: 99;
+    outline:dashed rgb(252, 252, 252) 1px;
+    position:relative;
+
 }
 
 nav{
     text-align: right;
     margin-right:5%;
-    box-sizing: border-box;
-    padding-top:2.5em;
-    
+    /* outline:dashed rgb(252, 252, 252) 1px; */
+    background-color:  rgb(245, 241, 241);
+    opacity:0.75;    
+    width:100%;
 }
 
 nav li{
     display:inline-block;
     list-style-type: none;
-    padding:5px;
-
+    padding:.5em;
+    margin-right:.5em;
     }
 
     li a{
         /* outline:dashed black 1px; */
         text-decoration: none;
+        color:#2E8BCE;
     }
 
-   
+   header h1{
+       color:rgb(245, 241, 241);
+       float:right;
+       /* outline:dashed rgb(252, 252, 252) 1px; */
+       position: absolute;
+       top:40%;
+       left:50%;
+       transform: translate(-40%, -50%);
+       font-size: 1.7em;
+       font-family: 'Raleway', sans-serif;
+       font-weight: 400;
+       
+   }
+   strong{
+       font-weight: 800;
+       font-size: 1.3em;
+
+
+   }
 
     footer{
-        background-color:  rgb(255, 0, 0);
-        outline:dashed orange 1px;
-        /* position:fixed; */
+        background-color:  black;
+        opacity: 0.85;
+        /* outline:dashed orange 1px; */
+        position:fixed;
         width:100vw;
-        height: 50px;
+        height: 25px;
         bottom:0;
+        /* position: absolute; */
         /* display:grid;
         grid-template-columns:4fr 3fr; */
         /* z-index: 99; */
@@ -55,4 +83,5 @@ nav li{
         outline:solid black 1px;
         padding-top: 40vh;
     } */
-}
+    
+/* } */
