@@ -1,7 +1,5 @@
-
-
 body{
-    width: 100%;
+    max-width: 480px;
     height:100%;
     margin:0px auto;
     background-color: rgb(245, 241, 241);

@@ -15,13 +15,13 @@
 
     <script id="recipe-template" type="text/x-handlebars-template">
         <div id="each-recipe">
-            <div id="image-and-title"> 
+            <h1 id="recipe-title">{{recipeName}}</h1>
+            <div id="image-and-title">
                 <img id="recipe-image" src="{{smallImageUrls}}" />
-                <h1 id="recipe-title">{{recipeName}}</h1>
             </div>
             <ul id="ingredients-list">{{ingredients}}</ul>
-			<p id="total-time">{{totalTimeInSeconds}}</p>
-			<a href="#" id="recipe-link" name="{{id}}">Recipe instructions</a>
+			<!-- <p id="total-time">{{totalTimeInSeconds}}</p> -->
+			<a href="#" id="recipe-link" class="recipe-button" name="{{id}}">get recipe</a>
             <!--TODO:Add source site URL to handlebar template -->
     	</div>
     </script>
@@ -35,78 +35,77 @@
 </head>
 
 <body>
+    <!-- header -->
     <header>
         <div>
             <img id="foodlogo" src="./img/food.png" />
             <h1>that's so <strong>cravin'</strong></h1>
         </div>
         
-            <nav>
-                <!-- <div class="icon-menu"></div> -->
-
-                <ul>
-                    <li class="navigator nav-search" data-content="recipe">
-                        <a href="search-form" class="icon-magnifier">search</a>
-                    </li>
-                    <li class="navigator abt" data-content="about">
-                        <a href="#abt" class="icon-about">about us</a>
-                    </li>
-                    <li class="navigator log-in" data-content="login">
-                        <a href="#log-in" class="icon-login">log in</a>
-
-                        <!-- <li class="navigator" data-content="My Account">
-                            <a href="#" class="icon-account">my account</a>
-                        </li> -->
-                </ul>
-
-            </nav>
-    
+        <!-- Navigation -->
+        <nav>
+            <!-- <div class="icon-menu"></div> -->
+            <ul>
+                <li class="navigator nav-search" data-content="recipe">
+                    <a href="search-form" class="icon-magnifier">search</a>
+                </li>
+                <li class="navigator abt" data-content="about">
+                    <a href="#abt" class="icon-about">about us</a>
+                </li>
+                <li class="navigator signup" data-content="signup">
+                    <a href="#sign-up" class="icon-login">sign up</a>
+                <!-- <li class="navigator" data-content="My Account">
+                    <a href="#" class="icon-account">my account</a>
+                </li> -->
+            </ul>
+        </nav>
     </header>
 
-
+    <!-- Recipe search form -->
     <section class="recipe-search-view container">
         <section class="search-view" id="search-form">
             <!--TODO:Add search result recipe count-->
             <form>
                 <fieldset>
-                    <legend>enter ingredients</legend>
+                    <legend><h2>what's in your fridge?</h2></legend>
                     <legend>
-                        <input id="first-ing" class="box" placeholder="#1" type="text">
+                        <input id="first-ing" class="input-box" placeholder="add an ingredient" type="text">
                     </legend>
                     <legend>
-                        <input id="second-ing" class="box" placeholder="#2" type="text">
+                        <input id="second-ing" class="input-box" placeholder="add an ingredient" type="text">
                     </legend>
                     <legend>
-                        <input id="third-ing" class="box" placeholder="#3" type="text">
+                        <input id="third-ing" class="input-box" placeholder="add an ingredient" type="text">
                     </legend>
                     <legend>
-                        <input id="fourth-ing" class="box" placeholder="#4" type="text">
+                        <input id="fourth-ing" class="input-box" placeholder="add an ingredient" type="text">
                     </legend>
                 </fieldset>
-                <button id="search-button" class="box" data-id="#">Search</button>
+                <button id="search-button" data-id="#" class="button">Search</button>
             </form>
         </section>
 
+        <!-- Recipe results (up to 10) -->
         <section class="recipe-view">
             <!-- <section id="recipe-count"></section> -->
             <section id="recipe-list"></section>
         </section>
-
     </section>
 
+    <!-- Sign up form -->
     <section class="signup-view container" id="sign-up">
         <form id="signup-box">
             <fieldset>
-                <legend>Sign Up</legend>
+                <legend><h2>Sign Up</h2></legend>
                 <legend>
-                    <input id="username" placeholder="Username" type="text">
+                    <input id="username" placeholder="Username" type="text" class="input-box">
                 </legend>
                 <legend>
-                    <input id="password" placeholder="Password" type="text">
+                    <input id="password" placeholder="Password" type="text" class="input-box">
                     <div id="food-prefs">
-                        <legend>Dietary Preferences:</legend>
+                        <legend><h2>dietary preferences</h2></legend>
                         <!-- Allergies List; CHANGE-TODO: can create seperate select form later -->
-                        <select id="allowedAllergy">
+                        <select id="allowedAllergy" class="select">
                             <option id="no-allergy">Select an Allergy</option>
                             <option id="396^Dairy-Free">Dairy-Free</option>
                             <option id="397^Egg-Free">Egg-Free</option>
@@ -121,7 +120,7 @@
                         </select>
 
                         <!-- Diet List; CHANGE-TODO: can create seperate select form later -->
-                        <select id="allowedDiet">
+                        <select id="allowedDiet" class="select">
                             <option id="no-diet">Select a Diet</option>
                             <option id="388^Lacto-Vegetarian">Lacto-Vegetarian</option>
                             <option id="389^Ovo-Vegetarian">Ovo-Vegetarian</option>
@@ -132,54 +131,63 @@
                         </select>
                     </div>
                 </legend>
-                <button id="sign-up-button" data-id="#">Submit</button>
+                <button id="sign-up-button" class="button" data-id="#">submit</button>
                 <!-- </legend> -->
             </fieldset>
         </form>
     </section>
-    <!-- // code above to be commented back in  -->
-    <section class="error-view container"></section>
 
+    <!-- Sign in form -->
     <section class="login-view container" id="log-in">
         <form id="login-box">
             <legend>
-                    <input id="username" placeholder="Username" type="text">
-                    <input id="password" placeholder="Password" type="text">
-                    <button id="log-in-button" data-id="#">Submit</button>
+                <input id="username" placeholder="Username" type="text" class="input-box">
+                <input id="password" placeholder="Password" type="text" class="input-box">
+                <button id="log-in-button" data-id="#">Submit</button>
             </legend>
         </form>
     </section>
 
+    <!-- Error view  -->
+    <section class="error-view container"></section>
+
+    <!-- About us view -->
     <!--TODO:Add photos and paragraphs for each team member-->
     <section class="about-view container" id="abt">
         <div class="me" id="nick">
-            <img src="http://placehold.it/100x100" />
-            <p>dkhadkhadadv aihduagd uadagaf ug da</p>
+            <img src="img/nicklas.jpg" />
+            <div>
+                <h1>Nick Di Pietro</h1>
+                <p>Nicklas is from Southern California; here since 2011. He's a fan of beer. In his offtime he's also a fan of Pugs, 3D modeling, and of course video games / coding.</p>
+            </div>
         </div>
         <div class="me" id="sara">
-            <img src="http://placehold.it/100x100" />
-            <p>I immigrated from Iran to the US about 7 years ago not knowing how to speak English. I worked at one of the top
-                5 architecture firms in the US, ZGF. At the same time I got my M.S. degree in Engineering and Technology
-                Management (ETM) from PSU.
-            </p>
+            <img src="img/sara.png" />
+            <div>
+                <h1>Sara Bahrini</h1>
+                <p>I immigrated from Iran to the US about 7 years ago not knowing how to speak English. I worked at one of the top 5 architecture firms in the US, ZGF. At the same time I got my M.S. degree in Engineering and Technology Management (ETM) from PSU.</p>
+            </div>
         </div>
         <div class="me" id="suzanne">
-            <img src="http://placehold.it/100x100" />
-            <p>dkhadkhadadv aihduagd uadagaf ug da</p>
+            <img src="img/Suzanne.jpg" />
+            <div>
+                <h1>Suzanne Leber</h1>
+                <p>dkhadkhadadv aihduagd uadagaf ug da</p>
+            </div>
         </div>
         <div class="me" id="tara">
-            <img src="http://placehold.it/100x100" />
-            <p>dkhadkhadadv aihduagd uadagaf ug da</p>
+            <img src="img/tara.jpg" />
+            <div>
+                <h1>Tara Johnson</h1>
+                <p>A user experience designer with a passion for digging into and solving problems looking to transition into software development. Raised in Cleveland, she is a super fan of all Cleveland sports teams.#whateverittakes</p>
+            </div>
         </div>
     </section>
 
-
-
     <!--TODO: Add footer content-->
-    <footer></footer>
+    <footer>information powered by Yummly</footer>
 
     <!--CHANGE-TODO:Check to make sure they are in the right order-->
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
@@ -199,6 +207,7 @@
     <script src="scripts/views/recipe-view.js"></script>
     <script src="scripts/views/search-view.js"></script>
     <script src="scripts/views/login-view.js"></script>
+    <script src="scripts/views/signup-view.js"></script>
     <script src="scripts/views/error-view.js"></script>
     <script src="scripts/views/about-view.js"></script>
     <script src="scripts/views/routes.js"></script>
@@ -207,15 +216,12 @@
         $(document).ready(function () {
             console.log("document ready!");
             app.Recipe.fetchAll(app.recipeView.initIndexPage, '');
-
+            $('.recipe-search-view').show();
             // // CHANGE-TODO: This is temporary:
             // $('.container').hide();
             // $('#srch').show();
             // $('.recipe-view').show();
         });
     </script>
-
 </body>
-
-
 </html>

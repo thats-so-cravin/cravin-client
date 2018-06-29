@@ -1,6 +1,6 @@
 'use strict';
 
-//Lisener for Sign Up button
+//Listener for Sign Up button
 $('#sign-up-button').on('click', handleForm);
 
 // Get request to server, return preferences
