@@ -1,13 +1,31 @@
 
 #search-form{
     /* outline:dashed black 1px; */
-    position: absolute; 
-    height:20%;
-    top:20%;
+    /* position: absolute;  */
+    /* height:20%; */
+    /* top:30%;
     left:34%;
-    transform:translate (-50%, -50%); 
-    z-index: 0;
+    transform:translate (-50%, -50%);  */
+    /* z-index: 0; */
     
+    width: 50%;
+    margin:auto;
+}
+
+.container{
+    outline:dashed black 1px;
+}
+
+.box{
+    outline: solid gray 1px;
+   /* margin:2px; */
+   /* position:absolute; */
+   /* display:inline-block;  */
+   /* width:70%; */
+   /* padding: 20px; */
+   /* margin:5px; */
+   /* border-bottom: 2px black solid; */
+   
 }
 
 
@@ -61,7 +79,7 @@
 #each-recipe {
     outline: solid black 1px;
     background-color:rgb(110, 109, 104);
-    z-index: 3;
+    /* z-index: 3; */
 
 }
 
@@ -101,12 +119,6 @@
 
 }
 
-.box{
-    outline: solid gray 1px;
-    margin:2px;
-    /* position:absolute; */
-    display:inline-block;
-    
-}
+
 
 
