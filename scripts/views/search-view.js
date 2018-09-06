@@ -39,7 +39,7 @@ function handleSearch(event) {
   let searchStr = `&q=${searchData.first_ing}+${searchData.second_ing}+${searchData.third_ing}+${searchData.fourth_ing}${allergyStr}${dietStr}`;
   console.log(`search str`, searchStr)
 
-  $.get(`https://api.yummly.com/v1/api/recipes?_app_id=78c6217b&_app_key=084d45aa3306778e2ebbc3148fdaab96${searchStr}`, data => {console.log(data)})
+  $.get(`https://api.yummly.com/v1/api/recipes?_app_id=9f58e968&_app_key=c36e4936121a7c9b5dd41fae93bc0e8b${searchStr}`, data => {console.log(data)})
 
   // DONE: Call fetchAll and pass it searchStr, modify fetchAll to accept argument of searchStr
   app.Recipe.fetchAll(app.Recipe.loadAll, searchStr);

@@ -18,7 +18,7 @@ var app = app || {};
       event.preventDefault();
       let id = this.name;
       console.log(this.name)
-      $.get(`https://api.yummly.com/v1/api/recipe/${id}?_app_id=78c6217b&_app_key=084d45aa3306778e2ebbc3148fdaab96`, data => {
+      $.get(`https://api.yummly.com/v1/api/recipe/${id}?_app_id=9f58e968&_app_key=c36e4936121a7c9b5dd41fae93bc0e8b`, data => {
         window.open(data.source.sourceRecipeUrl, '_blank')
       })
     }
